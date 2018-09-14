@@ -1,0 +1,15 @@
+swagger:
+  oauth:
+    base-url:  http://127.0.0.1:8001
+    client-id: demo_client
+    client-secret: demo_secret
+security:
+  headers:
+    frame: false
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArQyVQ1bYfwLuYG9fmfAALP/+/EMMQkvzHusYaLH5o4wQgiPUTVmGGBeCq9qKf0c64fYe0sz5F+hXJONmkjlw919Lvci7cRIN/NGfvXsNPQRWCqa3ToAFBnDpTkfCXCsW/Q4sIWzLPNYP9/+889gheCCi8LxHwfof2cKLOzm08G0SqmJy4350FoSCFJ43cnFzs/67SGNAe8A5zXmpP5rAmx7jbM7Pom1FChQcDGrQsNC8z74K4Zn8TB8UoYs/DUelO08u5reOguJfzNxMyTLgzk/pI6PM45p8wgxEQ+wabuZcVwbL4p3CS+oGZQyTVFKleb5kRp18amlgwjPY15OZ4QIDAQAB
+          -----END PUBLIC KEY-----
