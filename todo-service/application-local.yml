@@ -23,4 +23,4 @@ security:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery:3GfhPZQifTpVcu@$127.0.0.1:8761/eureka
+      defaultZone: http://discovery:3GfhPZQifTpVcu@127.0.0.1:8761/eureka
