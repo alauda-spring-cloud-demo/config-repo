@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: poker-ms-user
+          uri: lb://MS-USER
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
+swagger:
+  service-name: "用户服务"
+  service-desc: "管理用户信息"

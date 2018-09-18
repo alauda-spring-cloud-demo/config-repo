@@ -1,0 +1,26 @@
+swagger:
+  oauth:
+    base-url:  http://127.0.0.1:8001
+    client-id: demo_client
+    client-secret: demo_secret
+
+
+spring.profiles.include:
+  - eureka-client
+  - swagger
+---
+spring:
+  profiles: local
+server:
+  port: 8999
+logging:
+  level:
+    org.springframework.security: DEBUG
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.security: DEBUG
