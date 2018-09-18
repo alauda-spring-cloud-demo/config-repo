@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: todo-service
 swagger:
   service-name: "待办事项服务"
   service-desc: "管理待办事项"

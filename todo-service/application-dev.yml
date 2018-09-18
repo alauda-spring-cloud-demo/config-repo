@@ -6,8 +6,6 @@ swagger:
     client-id: demo_client
     client-secret: demo_secret
 spring:
-  application:
-    name: auth-server
   datasource:
     url: "jdbc:mysql://mysql/spring_cloud_demo?useUnicode=true&zeroDateTimeBehavior=convertToNull"
     username: "root"
