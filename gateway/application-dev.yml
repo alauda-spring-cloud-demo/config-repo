@@ -1,5 +1,5 @@
 server:
-  port: 9999
+  port: 8080
 swagger:
   oauth:
     base-url:  http://127.0.0.1:8001
@@ -8,4 +8,4 @@ swagger:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery:3GfhPZQifTpVcu@127.0.0.1:8761/eureka
+      defaultZone: http://discovery:3GfhPZQifTpVcu@eureka:8761/eureka
