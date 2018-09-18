@@ -1,5 +1,6 @@
 server:
   port: 8080
+spring:
   datasource:
     url: "jdbc:mysql://mysql/spring_cloud_demo?useUnicode=true&zeroDateTimeBehavior=convertToNull"
     username: "root"
