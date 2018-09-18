@@ -1,8 +1,5 @@
 server:
   port: 8001
-spring:
-  application:
-    name: auth-server
   datasource:
     url: "jdbc:mysql://127.0.0.1:3316/spring_cloud_demo?useUnicode=true&zeroDateTimeBehavior=convertToNull"
     username: "root"
@@ -12,15 +9,3 @@ oauth2:
     path: "jwt_keypair.jks"
     alias: "jwt"
     password: "KCPzQVp8VVyHV9Ds"
-flyway:
-  encoding: UTF-8
-  locations: classpath:db/migration
-  baseline-on-migrate: true
-  placeholder-prefix: '#['
-  placeholder-suffix: ']'
-  baseline-version: 1
-  sql-migration-prefix: V
-  sql-migration-suffix: .sql
-  init-sqls: select 1
-  table: oauth-schema-version
-  
