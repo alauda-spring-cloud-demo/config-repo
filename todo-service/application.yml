@@ -1,6 +1,6 @@
 swagger:
-  service-name: "待办事项服务"
-  service-desc: "管理待办事项"
+  service-name: "任务服务"
+  service-desc: "管理任务"
 eureka:
   instance:
     preferIpAddress: true

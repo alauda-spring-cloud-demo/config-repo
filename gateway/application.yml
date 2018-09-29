@@ -18,6 +18,20 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
+        - id: project-service
+          uri: lb://PROJECT-SERVICE
+          predicates:
+            - Path=/project-service/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
 eureka:
   instance:
     preferIpAddress: true
