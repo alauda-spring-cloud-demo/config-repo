@@ -1,0 +1,25 @@
+swagger:
+  service-name: "项目服务"
+  service-desc: "管理项目"
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.application.name}:${server.port}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+flyway:
+  encoding: UTF-8
+  locations: classpath:db/migration
+  baseline-on-migrate: true
+  placeholder-prefix: '#['
+  placeholder-suffix: ']'
+  baseline-version: 1
+  sql-migration-prefix: V
+  sql-migration-suffix: .sql
+  init-sqls: select 1
+  table: project-schema-version
