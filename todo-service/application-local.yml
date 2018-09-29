@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8003
 swagger:
   oauth:
     base-url:  http://127.0.0.1:8001
