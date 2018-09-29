@@ -22,4 +22,4 @@ flyway:
   sql-migration-prefix: V
   sql-migration-suffix: .sql
   init-sqls: select 1
-  table: todo-schema-version
+  table: user-schema-version
