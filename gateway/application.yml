@@ -32,6 +32,10 @@ spring:
           filters:
             - SwaggerHeaderFilter
             - StripPrefix=1
+        - id: message-service
+          uri: lb:ws://MESSAGE-SERVICE
+          predicates:
+            - Path=/message-service/**
 eureka:
   instance:
     preferIpAddress: true
