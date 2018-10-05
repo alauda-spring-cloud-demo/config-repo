@@ -36,6 +36,8 @@ spring:
           uri: lb:ws://MESSAGE-SERVICE
           predicates:
             - Path=/message-service/**
+          filters:
+            - StripPrefix=1
 eureka:
   instance:
     preferIpAddress: true
