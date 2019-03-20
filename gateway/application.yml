@@ -1,4 +1,11 @@
+server:
+  port: 8080
+swagger:
+  service-name: "Spring Cloud Demo API Docs"
+  service-desc: "DEMO接口文档"
 spring:
+  profiles.include:
+    - swagger
   cloud:
     gateway:
       globalcors:
@@ -38,14 +45,3 @@ spring:
             - Path=/message-service/**
           filters:
             - StripPrefix=1
-eureka:
-  instance:
-    preferIpAddress: true
-    instance-id: ${spring.application.name}:${server.port}
-    lease-expiration-duration-in-seconds: 30
-    lease-renewal-interval-in-seconds: 10
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    healthcheck:
-      enabled: true

@@ -1,11 +1,15 @@
+oauth2:
+  private-key:
+    path: "jwt_keypair.jks"
+    alias: "jwt"
+    password: "KCPzQVp8VVyHV9Ds"
 flyway:
-  encoding: UTF-8
-  locations: classpath:db/migration
-  baseline-on-migrate: true
-  placeholder-prefix: '#['
-  placeholder-suffix: ']'
-  baseline-version: 1
-  sql-migration-prefix: V
-  sql-migration-suffix: .sql
-  init-sqls: select 1
-  table: oauth-schema-version
+  table: oauth2-schema-version
+spring.profiles.include:
+  - swagger
+  - flyway
+  - rabbit
+  - jwt
+  - mysql
+  - undertow
+  - feign
