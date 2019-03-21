@@ -19,17 +19,17 @@ mysql:
 spring:
   profiles: dev
 mysql:
-  host: mysql-dev
+  host: mysql
   database: demodb_dev
 ---
 spring:
   profiles: prod
 mysql:
-  host: mysql-prod
+  host: mysql
   database: demodb_prod
 ---
 spring:
   profiles: test
 mysql:
-  host: mysql-test
+  host: mysql
   database: demodb_test
