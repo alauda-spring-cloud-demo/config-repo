@@ -19,17 +19,6 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: dummy-service
-          uri: lb://DUMMY-SERVICE
-          predicates:
-            - Path=/dummy-service/**
-          filters:
-            - StripPrefix=1
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 10
-                redis-rate-limiter.burstCapacity: 20
-                key-resolver: "#{@apiKeyResolver}"
         - id: todo-service
           uri: lb://TODO-SERVICE
           predicates:
@@ -54,3 +43,13 @@ spring:
             - Path=/message-service/**
           filters:
             - StripPrefix=1
+        - id: dummy-service
+          uri: lb://PROJECT-SERVICE
+          predicates:
+            - Path=/rate-limit/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 5
+                key-resolver: "#{@apiKeyResolver}"
