@@ -24,7 +24,7 @@ rabbit:
 spring:
   profiles: prod
 rabbit:
-  host: rabbitmq-prod
+  host: rabbitmq
 ---
 spring:
   profiles: test
