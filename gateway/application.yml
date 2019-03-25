@@ -19,13 +19,13 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: turbine
-          uri: lb://TURBINE
-          predicates:
-            - Path=/hystrix/**
-            - Path=/hystrix
-            - Path=/turbine.stream/**
-            - Path=/turbine.stream
+        # - id: turbine
+        #   uri: lb://TURBINE
+        #   predicates:
+        #     - Path=/hystrix/**
+        #     - Path=/hystrix
+        #     - Path=/turbine.stream/**
+        #     - Path=/turbine.stream
         - id: todo-service
           uri: lb://TODO-SERVICE
           predicates:
