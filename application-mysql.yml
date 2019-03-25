@@ -6,7 +6,7 @@ mysql:
   password: 'root123456'
 spring:
   datasource:
-    url: "jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.database}?useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false"
+    url: "jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.database}?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false"
     username: root
     password: ${mysql.password}
 ---
