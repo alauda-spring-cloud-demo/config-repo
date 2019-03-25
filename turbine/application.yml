@@ -1,0 +1,2 @@
+turbine:
+  appConfig: user-service,project-service,todo-service,message-service
