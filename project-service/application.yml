@@ -12,6 +12,7 @@ spring:
     - mysql
     - undertow
     - feign
+    - hystrix
   cloud:
     stream:
       binders: # 在此处配置要绑定的rabbitmq的服务信息；
