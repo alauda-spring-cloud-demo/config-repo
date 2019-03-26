@@ -1,5 +1,6 @@
 # Hystrix 默认加载的配置文件 - 限流、 熔断示例
 hystrix:
+  shareSecurityContext: true
   threadpool:
     #如果没有定义HystrixThreadPoolKey，HystrixThreadPoolKey会默认定义为HystrixCommandGroupKey的值
     default:
@@ -90,4 +91,4 @@ hystrix:
       # 缓冲区大小， 如果为-1，则不缓冲，直接进行降级 fallback
       maxQueueSize: -1
       # 线程池大小
-      coreSize: 3
+      coreSize: 2

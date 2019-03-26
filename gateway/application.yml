@@ -54,6 +54,7 @@ spring:
           predicates:
             - Path=/rate-limit/**
           filters:
+            - StripPrefix=1
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1
