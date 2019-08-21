@@ -20,7 +20,7 @@ spring:
   profiles: dev
 mysql:
   host: mysql
-  database: demodb_dev
+  database: demodb
 ---
 spring:
   profiles: prod
