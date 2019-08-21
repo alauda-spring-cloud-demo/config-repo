@@ -19,7 +19,7 @@ rabbit:
 spring:
   profiles: dev
 rabbit:
-  host: rabbitmq-dev
+  host: rabbitmq
 ---
 spring:
   profiles: prod
@@ -29,4 +29,4 @@ rabbit:
 spring:
   profiles: test
 rabbit:
-  host: rabbitmq-test
+  host: rabbitmq
